@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.globalCantainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.Game {
+  height: 500px;
+  width: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameCard {
+  height: 120px;
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
+.value {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.tictac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.tictac > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+  margin: 16px;
+  border-radius: 8px;
+}
+
+.order {
+  background-color: black;
+  color: white;
+}
+
+.button {
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameOver {
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.gameOverValue {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
 }

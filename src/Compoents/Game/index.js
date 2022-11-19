@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GameCard from "../GameCard";
 import GameOver from "../GameOver";
 
@@ -30,6 +30,8 @@ const Game = () => {
   const [gameCard, setGameCard] = useState(gameArray);
   const [value, setValue] = useState("X");
   const [check, setCheck] = useState(false);
+  const [draw, setDraw] = useState(false);
+  const [count, setCount] = useState(0);
   const gameAgain = () => {
     gameArray.map((item) => {
       item.value = "";
@@ -38,6 +40,30 @@ const Game = () => {
     setCheck(false);
     setValue("X");
   };
+  useEffect(() => {
+    setTimeout(() => {
+      if (count === 9) {
+        console.log("hello uys :>> ");
+        gameArray.map((item) => {
+          item.value = "";
+        });
+        setGameCard(gameArray);
+        setCheck(false);
+        setValue("X");
+      }
+    }, 1000);
+    console.log("hello :>> ");
+  }, [count]);
+  useEffect(() => {
+    let arrayCount = 0;
+    gameCard.map((item) => {
+      if (item.value) {
+        arrayCount += 1;
+      }
+    });
+    setCount(arrayCount);
+  }, [gameCard]);
+  console.log("count drsi :>> ", count);
   const gameCarde = (valueChange) => {
     combination.forEach((item) => {
       item.forEach((item2) => {
